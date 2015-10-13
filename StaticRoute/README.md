@@ -2,4 +2,4 @@
 
 Static Route
 
-![alt tag](https://raw.github.com/setra/INF-1023/master/StaticRoute/StaticRoute.png)
+![alt tag](https://github.com/setrar/INF-1023/blob/master/StaticRoute/StaticRoute.png)
