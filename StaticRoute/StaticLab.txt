@@ -1,0 +1,27 @@
+
+
+
+
+
+! Configure the Switch
+! Switch 1
+EN
+CONFIG T
+HOSTNAME SW1
+
+! All switch belongs to VLAN 1
+INT VLAN 1
+IP ADDRESS 192.168.1.253 255.255.255.0
+
+! Default Gateway
+IP DEFAULT-GATEWAY 192.168.1.254
+
+! Enable VLAN1
+INT VLAN 1
+NO SHUT
+
+! Get out
+EXIT
+EXIT
+
+
