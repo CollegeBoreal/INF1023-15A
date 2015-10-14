@@ -25,11 +25,11 @@ exit
 en
 config t
 int f0/0
-ip address 192.168.101.254 255.255.255.0
+ip address 192.168.100.254 255.255.255.0
 no shut
 
 int s0/1/0
-ip address 10.10.10.6 255.255.255.252
+ip address 10.10.10.5 255.255.255.252
 clock rate 4000000
 no shut
 
@@ -37,8 +37,8 @@ no shut
 ! Configurer les routes statiques
 en
 config t
-ip route 192.168.100.0 255.255.255.0 s0/1/0 150
 ip route 192.168.101.0 255.255.255.0 s0/1/0 150
+ip route 192.168.102.0 255.255.255.0 s0/1/0 150
 ip route 10.10.10.4 255.255.255.252 s0/1/0 150
 exit
 
@@ -66,14 +66,14 @@ exit
 en
 config t
 int f0/0
-ip address 192.168.102.254 255.255.255.0
-no shut
-
-int s0/1/0
-ip address 10.10.10.6 255.255.255.252
+ip address 192.168.101.254 255.255.255.0
 no shut
 
 int s0/1/1
+ip address 10.10.10.6 255.255.255.252
+no shut
+
+int s0/1/0
 ip address 10.10.10.9 255.255.255.252
 clock rate 4000000
 no shut
@@ -86,9 +86,10 @@ copy run start
 ! Configurer les routes statiques
 en
 config t
-ip route 192.168.100.0 255.255.255.0 s0/1/0 150
-ip route 192.168.101.0 255.255.255.0 s0/1/0 150
-ip route 10.10.10.4 255.255.255.252 s0/1/0 150
+ip route 192.168.100.0 255.255.255.0 s0/1/1 150
+ip route 10.10.10.4 255.255.255.252 s0/1/1 150
+ip route 192.168.102.0 255.255.255.0 s0/1/0 150
+ip route 10.10.10.8 255.255.255.252 s0/1/0 150
 do wr
 exit
 copy run start
