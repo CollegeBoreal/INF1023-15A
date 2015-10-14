@@ -97,7 +97,7 @@ copy run start
 ! =====================  Troisieme Routeur  =======================
 en
 config t
-hostname R2
+hostname R3
 enable password cisco
 enable secret etudiant
 
