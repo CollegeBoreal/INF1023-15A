@@ -1,7 +1,7 @@
 
 
 
-! Premier Routeur
+! =====================  Premier Routeur  =======================
 en
 config t
 hostname R1
@@ -42,7 +42,7 @@ ip route 192.168.102.0 255.255.255.0 s0/1/0 150
 ip route 10.10.10.4 255.255.255.252 s0/1/0 150
 exit
 
-! Deuxieme Routeur
+! =====================  Deuxieme Routeur  =======================
 en
 config t
 hostname R2
@@ -94,3 +94,46 @@ do wr
 exit
 copy run start
 
+! =====================  Troisieme Routeur  =======================
+en
+config t
+hostname R2
+enable password cisco
+enable secret etudiant
+
+line con 0
+password cisco
+login
+logging synchronous
+
+line vty 0 15
+password cisco
+login
+logging synchronous
+do wr
+exit
+exit
+
+! Configurer les interfaces du routeur
+en
+config t
+int f0/0
+ip address 192.168.102.254 255.255.255.0
+no shut
+
+int s0/1/1
+ip address 10.10.10.9 255.255.255.252
+no shut
+
+! Sauvegarder
+exit
+exit
+copy run start
+
+! Configurer la route par defaut
+en
+config t
+ip route 0.0.0.0 0.0.0.0 s0/1/1
+do wr
+exit
+copy run start
