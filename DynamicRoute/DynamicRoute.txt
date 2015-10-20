@@ -1,0 +1,87 @@
+
+
+
+! =====================  Premier Routeur  =======================
+en
+config t
+username inf1023 privilege 15 password 0 cisco
+
+line con 0
+login local
+
+do wr
+exit
+exit
+
+! Nettoyer le routage statique precedent
+config t
+no ip route 192.168.101.0 255.255.255.0 Serial0/1/0 150
+no ip route 192.168.102.0 255.255.255.0 Serial0/1/0 150
+no ip route 10.10.10.4 255.255.255.252 Serial0/1/0 150
+
+config t
+router rip
+version 2
+network 10.10.10.4
+network 192.168.100.0
+no auto-summary
+
+
+! =====================  Deuxieme Routeur  =======================
+en
+config t
+username inf1023 privilege 15 password 0 cisco
+
+line con 0
+login local
+
+do wr
+exit
+exit
+
+! Nettoyer le routage statique precedent
+config t
+no ip route 192.168.100.0 255.255.255.0 Serial0/1/1 150
+no ip route 192.168.101.0 255.255.255.0 Serial0/1/1 150
+no ip route 10.10.10.4 255.255.255.252 Serial0/1/1 150
+no ip route 192.168.102.0 255.255.255.0 Serial0/1/0 150
+no ip route 10.10.10.8 255.255.255.252 Serial0/1/0 150
+
+config t
+router rip
+version 2
+network 10.0.0.0
+network 192.168.101.0
+no auto-summary
+
+! =====================  Troisieme Routeur  =======================
+en
+config t
+username inf1023 privilege 15 password 0 cisco
+
+line con 0
+login local
+
+do wr
+exit
+exit
+
+! Nettoyer le routage statique precedent
+config t
+no ip route 0.0.0.0 0.0.0.0 Serial0/1/1
+
+! Configurer les interfaces du routeur
+en
+config t
+int f0/0
+ip address 192.168.103.254 255.255.255.0
+no shut
+
+config t
+router rip
+version 2
+network 10.0.0.0
+network 192.168.102.0
+no auto-summary
+
+default-information originate
