@@ -63,19 +63,6 @@ do wr
 exit
 exit
 
-! Configurer RIP v2
-config t
-router rip
-version 2
-network 10.0.0.0
-network 192.168.102.0
-network 192.168.103.0
-no auto-summary
-
-do wr
-exit
-exit
-
 ! Configurer les interfaces du routeur
 config t
 int f0/1
@@ -86,5 +73,24 @@ do wr
 exit
 exit
 
+! Configurer RIP v2
+config t
+router rip
+version 2
+network 10.0.0.0
+network 192.168.102.0
+no auto-summary
 
+do wr
+exit
+exit
+
+! Configurer RIP v2 Gateway of last resort
+config t
+router rip
 default-information originate
+
+do wr
+exit
+exit
+
