@@ -10,3 +10,5 @@ Pour pratiquer cet example:
 - respecter les 'ports' indiqués par le schéma (connecter les cables séries manuellement)
 
 ![alt tag](https://github.com/setrar/INF-1023/blob/master/EmptyRoute/EmptyRoute.png)
+
+Note: Utiliser Cisco Packet Tracer 6.2.0
