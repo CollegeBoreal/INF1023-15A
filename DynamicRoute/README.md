@@ -3,9 +3,10 @@
 Dynamic Route
 
 Pour pratiquer cet example:
-- utiliser PacketTracer
+- Utiliser PacketTracer
 - Ouvrir ../EmptyRoute/EmptyRoute.pkt
-- ajouter un server et le connecter avec R3 sur le reseau 192.168.103.0/24 
+- Ajouter un server et le connecter avec R3 sur le reseau 192.168.103.0/24 
+- Executer les commandes du fichier .txt
 
 ![alt tag](https://github.com/setrar/INF-1023/blob/master/DynamicRoute/DynamicRoute.png)
 
