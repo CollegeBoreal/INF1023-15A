@@ -63,19 +63,13 @@ do wr
 exit
 exit
 
-! Nettoyer le routage statique precedent
-config t
-no ip route 0.0.0.0 0.0.0.0 Serial0/1/1
-
-do wr
-exit
-
 ! Configurer RIP v2
 config t
 router rip
 version 2
 network 10.0.0.0
 network 192.168.102.0
+network 192.168.103.0
 no auto-summary
 
 do wr
@@ -83,9 +77,8 @@ exit
 exit
 
 ! Configurer les interfaces du routeur
-en
 config t
-int f0/0
+int f0/1
 ip address 192.168.103.254 255.255.255.0
 no shut
 
