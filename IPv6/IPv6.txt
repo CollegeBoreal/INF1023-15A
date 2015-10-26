@@ -1,0 +1,5 @@
+
+
+! Premier Routeur
+config t
+ipv6 unicast-routing
