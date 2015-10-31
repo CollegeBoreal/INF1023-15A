@@ -11,21 +11,6 @@ ipv6 address 2001:3200:B0EA:1000::F/56
 int s0/1/0
 ipv6 address 2001:3200:B0EA:1300::1/56
 
-! Permettre le routage IPv6
-ipv6 unicast-routing
-
-exit
-
-! Configuration de RIPng avec un process 1
-ipv6 router rip 1
-
-! Configurer les routes
-int f0/0
-ipv6 rip 1 enable
-
-int s0/1/0
-ipv6 rip 1 enable
-
 exit
 exit
 wr
@@ -44,26 +29,11 @@ ipv6 address 2001:3200:B0EA:1300::2/56
 int s0/1/0
 ipv6 address 2001:3200:B0EA:1400::1/56
 
-! Permettre le routage IPv6
-ipv6 unicast-routing
-
-exit
-
-! Configuration de RIPng avec un process 1
-!ipv6 router rip 1
-
-! Configurer les routes
-int f0/0
-ipv6 rip 1 enable
-
-int s0/1/0
-ipv6 rip 1 enable
-
 exit
 exit
 wr
 
-! Dernier Routeur
+! Troisieme Routeur
 ! Se mettre en mode privilege
 config t
 
@@ -74,21 +44,7 @@ ipv6 address 2001:3200:B0EA:1200::F/56
 int s0/1/1
 ipv6 address 2001:3200:B0EA:1400::2/56
 
-! Permettre le routage IPv6
-ipv6 unicast-routing
-
-exit
-
-! Configuration de RIPng avec un process 1
-!ipv6 router rip 1
-
-! Configurer les routes
-int f0/0
-ipv6 rip 1 enable
-
-int s0/1/0
-ipv6 rip 1 enable
-
 exit
 exit
 wr
+
