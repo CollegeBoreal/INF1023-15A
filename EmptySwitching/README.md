@@ -7,7 +7,7 @@ Pour pratiquer cet example:
 - ajouter 1 commutateur Cisco 2960
 - Executer les commandes du fichier .txt
 
-![alt tag](https://github.com/setrar/INF-1023/blob/master/EmptyRoute/EmptySwitching.png)
+![alt tag](https://github.com/setrar/INF-1023/blob/master/EmptySwitching/EmptySwitching.png)
 
 # Objectif
 Manipuler le CLI sur un commutateur
