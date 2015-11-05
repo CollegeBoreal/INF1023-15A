@@ -1,0 +1,5 @@
+
+! =====================  Premier Commutateur  =======================
+! Entrer en mode privilege
+
+show mac-address-table 
