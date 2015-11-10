@@ -1,6 +1,6 @@
 # INF-1023
 
-OSPF Route
+OSPF Route - POINT a POINT
 
 Pour pratiquer cet example:
 - Utiliser PacketTracer
