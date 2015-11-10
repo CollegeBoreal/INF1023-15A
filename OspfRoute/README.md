@@ -10,10 +10,14 @@ Pour pratiquer cet example:
 ![alt tag](https://github.com/setrar/INF-1023/blob/master/OspfRoute/OspfRoute.png)
 
 Les commandes a retenir:
+
 SHOW IP ROUTE                "Chercher des O"
+
 SHOW IP OSPF NEIGHBOR
+
 SHOW IP OSPF DATABASE
-SHOW IP OSPF <Interface>
+
+SHOW IP OSPF INT <Interface>
 
 
 Note: Utiliser Cisco Packet Tracer 6.2.0
