@@ -1,0 +1,48 @@
+
+! =====================  Premier Routeur  =======================
+! Entrer en mode privilege
+config t
+
+! Configurer OSPF
+! 1 sera le Process ID sur 64Ko
+router ospf 1
+
+! Entrer le reseau, le Wildcard Mask, le numero de l'aire unique SINGLE AREA
+network 192.168.100.0 0.0.0.255 area 51
+network 10.10.10.4 0.0.0.3 area 51
+do wr
+exit
+exit
+
+
+! =====================  Deuxieme Routeur  =======================
+! Entrer en mode privilege
+config t
+
+! Configurer OSPF
+! 1 sera le Process ID sur 64Ko
+router ospf 1
+
+! Entrer le reseau, le Wildcard Mask, le numero de l'aire unique SINGLE AREA
+network 192.168.101.0 0.0.0.255 area 51
+network 10.10.10.4 0.0.0.3 area 51
+network 10.10.10.8 0.0.0.3 area 51
+do wr
+exit
+exit
+
+! =====================  Deuxieme Routeur  =======================
+! Entrer en mode privilege
+config t
+
+! Configurer OSPF
+! 1 sera le Process ID sur 64Ko
+router ospf 1
+
+! Entrer le reseau, le Wildcard Mask, le numero de l'aire unique SINGLE AREA
+network 192.168.102.0 0.0.0.255 area 51
+network 10.10.10.8 0.0.0.3 area 51
+do wr
+exit
+exit
+
