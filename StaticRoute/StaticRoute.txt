@@ -6,12 +6,11 @@
 
 ! Configurer les routes statiques
 config t
-ip route 192.168.101.0 255.255.255.0 s0/1/0 150
-ip route 192.168.102.0 255.255.255.0 s0/1/0 150
-ip route 10.10.10.4 255.255.255.252 s0/1/0 150
+ip route 192.168.101.0 255.255.255.0 s0/1/1 150
+ip route 192.168.102.0 255.255.255.0 s0/1/1 150
+ip route 10.10.10.4 255.255.255.252 s0/1/1 150
 
 do wr
-exit
 exit
 
 ! =====================  Deuxieme Routeur  =======================
@@ -19,13 +18,12 @@ exit
 
 ! Configurer les routes statiques
 config t
-ip route 192.168.100.0 255.255.255.0 s0/1/1 150
-ip route 10.10.10.4 255.255.255.252 s0/1/1 150
-ip route 192.168.102.0 255.255.255.0 s0/1/0 150
-ip route 10.10.10.8 255.255.255.252 s0/1/0 150
+ip route 192.168.100.0 255.255.255.0 s0/1/0 150
+ip route 10.10.10.4 255.255.255.252 s0/1/0 150
+ip route 192.168.102.0 255.255.255.0 s0/1/1 150
+ip route 10.10.10.8 255.255.255.252 s0/1/1 150
 
 do wr
-exit
 exit
 
 ! =====================  Troisieme Routeur  =======================
@@ -33,8 +31,7 @@ exit
 
 ! Configurer la route par defaut
 config t
-ip route 0.0.0.0 0.0.0.0 s0/1/1
+ip route 0.0.0.0 0.0.0.0 s0/1/0
 
 do wr
-exit
 exit
