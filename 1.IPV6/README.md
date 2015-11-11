@@ -4,7 +4,7 @@ IPv6 Configuration "Dual Stack"
 
 Pour pratiquer cet example:
 - utiliser PacketTracer
-- Ouvrir le fichier ../EmptyRoute/EmptyRoute.pkt
+- Ouvrir le fichier ../1.EmptyRoute/EmptyRoute.pkt
 - Executer les commandes du fichier .txt
 
 ![alt tag](https://github.com/setrar/INF-1023/blob/master/1.IPv6/IPv6.png)
