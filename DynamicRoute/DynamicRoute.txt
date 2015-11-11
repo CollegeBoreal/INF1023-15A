@@ -65,7 +65,7 @@ exit
 
 ! Configurer les interfaces du routeur
 config t
-int f0/1
+int g0/1
 ip address 192.168.103.254 255.255.255.0
 no shut
 
