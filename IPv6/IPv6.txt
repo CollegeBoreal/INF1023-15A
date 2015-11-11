@@ -5,10 +5,10 @@
 config t
 
 ! Configurer les interfaces en IPv6
-int f0/0
+int g0/0
 ipv6 address 2001:3200:B0EA:1000::F/56
 
-int s0/1/0
+int s0/1/1
 ipv6 address 2001:3200:B0EA:1300::1/56
 
 exit
@@ -20,13 +20,13 @@ wr
 config t
 
 ! Configurer les interfaces en IPv6
-int f0/0
+int g0/0
 ipv6 address 2001:3200:B0EA:1100::F/56
 
-int s0/1/1
+int s0/1/0
 ipv6 address 2001:3200:B0EA:1300::2/56
 
-int s0/1/0
+int s0/1/1
 ipv6 address 2001:3200:B0EA:1400::1/56
 
 exit
@@ -38,11 +38,11 @@ wr
 config t
 
 ! Configurer les interfaces en IPv6
-int f0/0
+int g0/0
 ipv6 address 2001:3200:B0EA:1200::F/56
 
-int s0/1/1
-ipv6 address 2001:3200:B0EA:1400::2/56
+int s0/1/0
+ipv6 address 2001:3200:B0EA:1400::1/56
 
 exit
 exit

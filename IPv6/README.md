@@ -7,6 +7,14 @@ Pour pratiquer cet example:
 - Ouvrir le fichier ../EmptyRoute/EmptyRoute.pkt
 - Executer les commandes du fichier .txt
 
-![alt tag](https://github.com/setrar/INF-1023/blob/master/IPv6/IPv6.png)
+![alt tag](https://github.com/setrar/INF-1023/blob/master/1.IPv6/IPv6.png)
+
+* Le but de l'exercice:
+
+Configurer les interfaces en IPV6
+
+* Les commandes a retenir:
+
+SHOW IPV6 INTERFACE BRIEF 
 
 Note: Utiliser Cisco Packet Tracer 6.2.0
