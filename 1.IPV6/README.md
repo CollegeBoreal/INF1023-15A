@@ -7,7 +7,7 @@ Pour pratiquer cet example:
 - Ouvrir le fichier ../1.EmptyRoute/EmptyRoute.pkt
 - Executer les commandes du fichier .txt
 
-![alt tag](https://github.com/setrar/INF-1023/blob/master/1.IPv6/IPv6.png)
+![alt tag](https://github.com/setrar/INF-1023/blob/master/1.IPV6/IPv6.png)
 
 * Le but de l'exercice:
 
