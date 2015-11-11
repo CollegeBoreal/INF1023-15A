@@ -6,7 +6,7 @@ Pour pratiquer cet example:
 - utiliser PacketTracer
 - Ouvrir ../EmptyRoute/EmptyRoute.pkt
 
-![alt tag](https://github.com/setrar/INF-1023/blob/master/StaticRoute/StaticRoute.png)
+![alt tag](https://github.com/setrar/INF-1023/blob/master/2.StaticRoute/StaticRoute.png)
 
 * Le but de l'exercice:
 
