@@ -5,9 +5,10 @@ Scripts Packet Tracer
 
 A executer dans l'odre suivant:
 
-- EmptyRoute
-- StaticRoute
-- DynamicRoute
+- 1.EmptyRoute
+- 1.IPV6
+- 2.StaticRoute
+- 3.DynamicRoute
 
 
 
