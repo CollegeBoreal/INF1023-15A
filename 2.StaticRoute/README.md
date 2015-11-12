@@ -4,7 +4,7 @@ Static Route
 
 Pour pratiquer cet example:
 - utiliser PacketTracer
-- Ouvrir ../EmptyRoute/EmptyRoute.pkt
+- Ouvrir ../0.IPv4/IPv4.pkt
 
 ![alt tag](https://github.com/setrar/INF-1023/blob/master/2.StaticRoute/StaticRoute.png)
 
