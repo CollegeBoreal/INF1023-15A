@@ -7,6 +7,6 @@ Pour pratiquer cet example:
 - Ouvrir le fichier ../IPv6/IPv6.pkt
 - Executer les commandes du fichier .txt
 
-![alt tag](https://github.com/setrar/INF-1023/blob/master/RIPng/RIPng.png)
+![alt tag](https://github.com/setrar/INF-1023/blob/master/4.RIPngRoute/RIPngRoute.png)
 
 Note: Utiliser Cisco Packet Tracer 6.2.0
