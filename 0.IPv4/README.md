@@ -1,6 +1,6 @@
 # INF-1023
 
-Empty Route
+IPv4
 
 Pour pratiquer cet example:
 - utiliser PacketTracer
@@ -9,7 +9,7 @@ Pour pratiquer cet example:
 - respecter les 'ports' indiqués par le schéma (connecter les cables séries manuellement)
 - Executer les commandes du fichier .txt
 
-![alt tag](https://github.com/setrar/INF-1023/blob/master/1.EmptyRoute/EmptyRoute.png)
+![alt tag](https://github.com/setrar/INF-1023/blob/master/0.IPv4/IPv4.png)
 
 * Le but de l'exercice:
 
