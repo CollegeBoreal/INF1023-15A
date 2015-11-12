@@ -3,8 +3,8 @@
 Dynamic Route
 
 Pour pratiquer cet example:
-- Utiliser PacketTracer
-- Ouvrir ../EmptyRoute/EmptyRoute.pkt
+- utiliser PacketTracer
+- Ouvrir le fichier ../0.IPv4/IPv4.pkt
 - Ajouter un serveur et le connecter avec R3 sur le reseau 192.168.103.0/24 
 - Executer les commandes du fichier .txt
 
