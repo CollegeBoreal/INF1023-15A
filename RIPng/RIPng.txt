@@ -7,14 +7,14 @@ config t
 ! Permettre le routage IPv6
 ipv6 unicast-routing
 
-! Configuration de RIPng avec un process 1
+! Configuration de RIPng avec un Process ID a 1
 ipv6 router rip 1
 
 ! Configurer les routes
-int f0/0
+int g0/0
 ipv6 rip 1 enable
 
-int s0/1/0
+int s0/1/1
 ipv6 rip 1 enable
 
 exit
@@ -32,10 +32,13 @@ ipv6 unicast-routing
 !ipv6 router rip 1
 
 ! Configurer les routes
-int f0/0
+int g0/0
 ipv6 rip 1 enable
 
 int s0/1/0
+ipv6 rip 1 enable
+
+int s0/1/1
 ipv6 rip 1 enable
 
 exit
@@ -53,7 +56,7 @@ ipv6 unicast-routing
 !ipv6 router rip 1
 
 ! Configurer les routes
-int f0/0
+int g0/0
 ipv6 rip 1 enable
 
 int s0/1/0
