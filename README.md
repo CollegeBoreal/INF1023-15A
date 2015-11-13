@@ -5,7 +5,7 @@ Scripts Packet Tracer
 
 A executer dans l'odre suivant:
 
-- 1.EmptyRoute
+- 0.IPv4
 - 1.IPV6
 - 2.StaticRoute
 - 3.RIPv2Route
