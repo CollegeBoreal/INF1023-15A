@@ -1,12 +1,13 @@
 # INF-1023
 
-IPv6 Configuration  RIPng
+##RIPng Route - IPv6 Configuration  
 
 Pour pratiquer cet example:
+```
 - utiliser PacketTracer
 - Ouvrir le fichier ../IPv6/IPv6.pkt
 - Executer les commandes du fichier .txt
-
+```
 ![alt tag](https://github.com/setrar/INF-1023/blob/master/4.RIPngRoute/RIPngRoute.png)
 
 ## Le but de l'exercice:
