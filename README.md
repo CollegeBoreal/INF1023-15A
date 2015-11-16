@@ -15,6 +15,8 @@ A executer dans l'ordre suivant:
 - 4.RIPngRoute
 - 5.EIGRPRoute
 - 6.OSPFRoute
+
+A.EmptySwitching
 ```
 
 ## Protocoles de commutation
