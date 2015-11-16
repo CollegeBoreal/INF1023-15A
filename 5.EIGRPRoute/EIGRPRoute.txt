@@ -4,12 +4,10 @@
 ! =====================  Premier Routeur  =======================
 ! Entrer en mode privilege
 config t
-
-! Configurer RIP v2
-router rip
-version 2
-network 10.10.10.4
+! Configurer le Systeme Autonome - Autonomous System
+router eigrp 100
 network 192.168.100.0
+network 10.10.10.4
 no auto-summary
 
 do wr
@@ -20,12 +18,10 @@ exit
 ! =====================  Deuxieme Routeur  =======================
 ! Entrer en mode privilege
 config t
-
-! Configurer RIP v2
-router rip
-version 2
-network 10.0.0.0
+! Configurer le Systeme Autonome - Autonomous System
+router eigrp 100
 network 192.168.101.0
+network 10.0.0.0
 no auto-summary
 
 do wr
@@ -35,34 +31,14 @@ exit
 ! =====================  Troisieme Routeur  =======================
 ! Entrer en mode privilege
 config t
-
-! Configurer RIP v2
-config t
-router rip
-version 2
-network 10.0.0.0
+! Configurer le Systeme Autonome - Autonomous System
+router eigrp 100
 network 192.168.102.0
+network 10.0.0.0
 no auto-summary
 
 do wr
 exit
 exit
 
-! Configurer RIP v2 Gateway of last resort
-config t
-router rip
-default-information originate
-
-do wr
-exit
-exit
-
-! Configurer les interfaces du routeur pour le serveur externe
-int g0/1
-ip address 192.168.103.254 255.255.255.0
-no shut
-
-do wr
-exit
-exit
 

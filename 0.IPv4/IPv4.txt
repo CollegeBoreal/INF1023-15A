@@ -22,6 +22,7 @@ do wr
 exit
 exit
 
+
 ! Configurer les interfaces du routeur
 en
 config t
@@ -42,18 +43,12 @@ exit
 en
 config t
 hostname R2
-enable password cisco
-enable secret etudiant
+
+! Ajouter un utilisateur 
+username inf1023 privilege 15 password 0 cisco
 
 line con 0
-password cisco
-login
-logging synchronous
-
-line vty 0 15
-password cisco
-login
-logging synchronous
+login local
 
 do wr
 exit
