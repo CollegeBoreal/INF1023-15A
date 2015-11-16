@@ -10,9 +10,8 @@ A executer dans l'ordre suivant:
 - 2.StaticRoute
 - 3.RIPv2Route
 - 4.RIPngRoute
-- 4.EIGRPRoute
-
-
+- 5.EIGRPRoute
+- 6.OSPFRoute
 
 
 Les laboratoires du cours ont ete largement inspire par ceux fournis par:
