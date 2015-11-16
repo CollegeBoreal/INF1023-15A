@@ -28,5 +28,7 @@ A executer dans l'ordre suivant:
 ### Notice:
 
 Les laboratoires du cours ont ete largement inspire par ceux fournis par:
+
 Lazario Diaz:
+
 http://thenetworkingdoctors.com/
