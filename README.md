@@ -16,7 +16,7 @@ A executer dans l'ordre suivant:
 - 5.EIGRPRoute
 - 6.OSPFRoute
 
-A.EmptySwitching
+- A.EmptySwitching
 ```
 
 ## Protocoles de commutation
