@@ -3,6 +3,8 @@
 
 Scripts Packet Tracer
 
+-- Protocoles de routage
+
 A executer dans l'ordre suivant:
 
 - 0.IPv4
@@ -13,6 +15,11 @@ A executer dans l'ordre suivant:
 - 5.EIGRPRoute
 - 6.OSPFRoute
 
+-- Protocoles de commutation
+
+A executer dans l'ordre suivant:
+
+- A.EmptyRoute
 
 Les laboratoires du cours ont ete largement inspire par ceux fournis par:
 Lazario Diaz:
