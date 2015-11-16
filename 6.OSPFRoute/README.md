@@ -4,10 +4,10 @@ OSPF Route - POINT a POINT
 
 Pour pratiquer cet example:
 - Utiliser PacketTracer
-- Ouvrir ../EmptyRoute/EmptyRoute.pkt
+- Ouvrir ../0.IPv4/IPv4.pkt
 - Executer les commandes du fichier .txt
 
-![alt tag](https://github.com/setrar/INF-1023/blob/master/OspfRoute/OspfRoute.png)
+![alt tag](https://github.com/setrar/INF-1023/blob/master/OSPFRoute/OSPFRoute.png)
 
 Les commandes a retenir:
 
