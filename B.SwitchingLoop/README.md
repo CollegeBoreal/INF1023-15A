@@ -7,7 +7,7 @@ Pour pratiquer cet example:
 - ajouter 3 commutateur Cisco 2960
 - les connecter avec des cables "crossover"
 
-![alt tag](https://github.com/setrar/INF-1023/blob/master/SwitchingLoop/SwitchingLoop.png)
+![alt tag](https://github.com/setrar/INF-1023/blob/master/B.SwitchingLoop/SwitchingLoop.png)
 
 # Objectif
 Rechercher le "Bridge Root" dans une configuratrion redondante
