@@ -1,0 +1,6 @@
+! =====================  Un Commutateur  =======================
+! Entrer en mode privilege
+config t
+
+! Changer le 'Root Bridge'
+spanning-tree vlan 1 priority 0
