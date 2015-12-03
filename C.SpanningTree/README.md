@@ -13,6 +13,6 @@ Pour pratiquer cet example:
 Changer le "Root Bridge" dans une configuratrion redondante
 
 ## Commandes
-voir le fichier txt
+` show cdp neighbors `
 
 Note: Utiliser Cisco Packet Tracer 6.2.0
