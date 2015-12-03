@@ -10,7 +10,7 @@ Pour pratiquer cet example:
 ![alt tag](https://github.com/setrar/INF-1023/blob/master/B.SwitchingLoop/SwitchingLoop.png)
 
 # Objectif
-Rechercher le "Bridge Root" dans une configuratrion redondante
+Rechercher le "Root Bridge" dans une configuratrion redondante
 
 ## Commandes
 `show spanning-tree vlan 1`
