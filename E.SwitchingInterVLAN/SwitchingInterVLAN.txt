@@ -1,23 +1,26 @@
 
-! =====================  Premier Commutateur  =======================
+! =====================  Premier Commutateur  (Code) =======================
 ! Entrer en mode privilege
 config t
-hostname SW1
+hostname CORE_SW1
 
-! Creer un VLAN (Autre que celui par defaut)
-vlan 2
+! Creer les VLANs en utilisant STP
+spanning-tree VLAN 1,10,20
+
+! Premier VLAN (a part celui par defaut)
+vlan 10
 name ADMINISTRATION
 
-! Donner acces au port f0/2 au vlan 2
-int f0/2
-switchport mode access
-switchport access vlan 2
-do wr
+! Deuxieme VLAN
+vlan 20
+name ETUDIANTS
 
-! Passer le port f0/21 en mode trunk
-int f0/21
+! Creer un domaine VTP (mode serveuer par defaut pour Core, clients pour les autres)
+vtp domain BOREAL
+
+! Passer les ports f0/21-23 en mode trunk
+int range f0/21-22
 switchport mode trunk
-do wr
 
 ! =====================  Deuxieme Commutateur  =======================
 ! Entrer en mode privilege
