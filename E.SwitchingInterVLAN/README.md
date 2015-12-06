@@ -4,7 +4,7 @@ Switching Inter VLAN
 
 Pour pratiquer cet example:
 - utiliser PacketTracer
-- ajouter 3 commutateur Cisco 2960
+- ajouter 3 commutateurs Cisco 2960
 - les connecter avec des cables "crossover"
 - executer le fichier texte
 
