@@ -1,0 +1,36 @@
+
+! =====================  Premier Commutateur  =======================
+! Entrer en mode privilege
+config t
+hostname SW1
+
+! Creer un VLAN (Autre que celui par defaut)
+vlan 2
+name ADMINISTRATION
+
+! Donner acces au port f0/2 au vlan 2
+int f0/2
+switchport mode access
+switchport access vlan 2
+do wr
+
+! Passer le port f0/21 en mode trunk
+int f0/21
+switchport mode trunk
+do wr
+
+! =====================  Deuxieme Commutateur  =======================
+! Entrer en mode privilege
+config t
+hostname SW2
+
+! Creer un VLAN (Autre que celui par defaut)
+vlan 2
+name ADMINISTRATION
+
+! Donner acces au port f0/2 au vlan 2
+int f0/2
+switchport mode access
+switchport access vlan 2
+do wr
+
