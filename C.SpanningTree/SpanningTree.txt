@@ -4,3 +4,12 @@ config t
 
 ! Changer le 'Root Bridge'
 spanning-tree vlan 1 priority 0
+
+
+! Desactiver STP aux ports donnes pour un access instantane
+int range f0/1-15
+spanning-tree portfast
+
+! Empecher les trames BPDU d'acceder aux ports donnes
+int range f0/1-15
+spanning-tree bpduguard enable

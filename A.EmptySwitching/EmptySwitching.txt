@@ -3,3 +3,22 @@
 ! Entrer en mode privilege
 
 show mac-address-table 
+
+
+! Reserver l'acces des ports FastEthernet 1 a 15 aux equipements utilisateurs
+int range f0/1-15
+switchport mode access
+
+! Introduire de la securite de base
+switchport port-security
+
+! conserver une seule adresse MAC dans la table d'adresse
+switchport port-security mac sticky
+switchport port-security max 1
+
+! Si une autre adresse MAC introduite (i.e. un autre PC) fermer le port
+switchport port-security vio shut
+
+! Verifier la securite des ports
+show port-security
+
