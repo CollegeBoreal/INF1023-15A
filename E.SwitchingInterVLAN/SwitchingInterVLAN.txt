@@ -1,39 +1,110 @@
 
-! =====================  Premier Commutateur  (Code) =======================
+! =====================  Premier Commutateur  (Core) =======================
 ! Entrer en mode privilege
 config t
 hostname CORE_SW1
 
-! Creer les VLANs en utilisant STP
-spanning-tree VLAN 1,10,20
+! Creer les VLANs en utilisant STP sur la 'Root Bridge'
+spanning-tree VLAN 1,100,200 priority 0
 
 ! Premier VLAN (a part celui par defaut)
-vlan 10
+vlan 100
 name ADMINISTRATION
 
 ! Deuxieme VLAN
-vlan 20
+vlan 200
 name ETUDIANTS
 
 ! Creer un domaine VTP (mode serveur par defaut pour Core, clients pour les autres)
 vtp domain BOREAL
 
-! Passer les ports f0/21-23 en mode trunk
-int range f0/21-22
+! Passer les ports f0/22-23 en mode trunk
+int range f0/22-23
 switchport mode trunk
+
+! Passer le port g0/1 en mode trunk
+int  g0/1
+switchport mode trunk
+
+do wr
+end
 
 ! =====================  Deuxieme Commutateur  =======================
 ! Entrer en mode privilege
 config t
-hostname SW2
+hostname ADMINISTRATION
 
-! Creer un VLAN (Autre que celui par defaut)
-vlan 2
-name ADMINISTRATION
+! Mode VTP (permet la copie descendante des VLANs)
+vtp mode client
 
-! Donner acces au port f0/2 au vlan 2
-int f0/2
+! Assigner les ports F0/1-15 au VLAN 100
+int range f0/1-15
 switchport mode access
-switchport access vlan 2
-do wr
+switchport access vlan 100
 
+! Activer un protection minimale aux ports d'acces
+switchport port-security mac sticky
+switchport port-security max 1
+switchport port-security vio shut
+
+! Desactiver STP aux ports
+spanning-tree portfast
+spanning-tree bpduguard enable
+
+do wr
+end
+
+! =====================  Troisieme Commutateur  =======================
+! Entrer en mode privilege
+config t
+hostname ETUDIANTS
+
+! Mode VTP
+vtp mode client
+
+! Assigner les ports F0/1-15 au VLAN 200
+int range f0/1-15
+switchport mode access
+switchport access vlan 200
+
+! Activer un protection minimale aux ports d'acces
+switchport port-security mac sticky
+switchport port-security max 1
+switchport port-security vio shut
+
+! Desactiver STP aux ports
+spanning-tree portfast
+spanning-tree bpduguard enable
+
+do wr
+end
+
+! =====================   Routeur  =======================
+! Entrer en mode privilege
+config t
+hostname R1
+
+! Pas d'adresse IP a l'interface
+int g0/0
+no shut
+
+! Configuration des sous-interfaces par VLANs
+! 
+
+! VLAN 100
+int g0/0.100
+encap dot1q 100
+ip address 192.168.100.254 255.255.255.0
+
+! VLAN 200
+int g0/0.200
+encap dot1q 200
+ip address 192.168.200.254 255.255.255.0
+
+! Configurer l'adresse du serveur
+int g0/1
+ip address 10.10.10.5 255.255.255.252
+no shut
+
+do wr
+end
