@@ -15,7 +15,7 @@ name ADMINISTRATION
 vlan 20
 name ETUDIANTS
 
-! Creer un domaine VTP (mode serveuer par defaut pour Core, clients pour les autres)
+! Creer un domaine VTP (mode serveur par defaut pour Core, clients pour les autres)
 vtp domain BOREAL
 
 ! Passer les ports f0/21-23 en mode trunk
