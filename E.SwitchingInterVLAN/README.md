@@ -21,5 +21,6 @@ Communement appelle "Router on a Stick"
 
 ` show int <Interface> switchport ` (i.e. shot int f0/21 switchport)
 
+` show vtp status `
 
 Note: Utiliser Cisco Packet Tracer 6.2.0
