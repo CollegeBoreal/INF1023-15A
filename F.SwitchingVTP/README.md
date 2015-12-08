@@ -8,7 +8,7 @@ Pour pratiquer cet example:
 - les connecter avec des cables "crossover"
 - executer le fichier texte
 
-![alt tag](https://github.com/setrar/INF-1023/blob/master/E.SwitchingVTP/SwitchingVTP.png)
+![alt tag](https://github.com/setrar/INF-1023/blob/master/F.SwitchingVTP/SwitchingVTP.png)
 
 # Objectif
 Connecter 2 VLANs a par l'intermediaire d'un router
