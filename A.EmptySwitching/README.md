@@ -8,7 +8,7 @@ Pour pratiquer cet example:
 - ajouter 2 PC
 - Executer les commandes du fichier .txt
 
-![alt tag](https://github.com/setrar/INF-1023/blob/master/EmptySwitching/EmptySwitching.png)
+![alt tag](https://github.com/CollegeBoreal/INF1023-15A/blob/master/EmptySwitching/EmptySwitching.png)
 
 # Objectif
 Manipuler le CLI sur un commutateur
